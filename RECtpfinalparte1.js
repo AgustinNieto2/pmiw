@@ -1,8 +1,8 @@
-let estado = 0; // Estado inicial
-let textos = [];
 //Comision nro 3 
 //Alumno : Nieto Agustin 
 //Rec Tpfinal parte 1 
+let estado = 0; // Estado inicial
+let textos = [];
 let botonA = [];
 let botonB = [];
 let fondos = [];
