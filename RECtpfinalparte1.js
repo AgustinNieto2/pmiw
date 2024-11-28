@@ -141,7 +141,7 @@ function inicializar() {
     null,
     { text: "recibir ayuda de Thor ", next: 10 },
     null,
-    { text: "Iron Man Solo", next: 11 },
+    { text: "Volver al Inicio", next: 1 },
     null,
     null,
     null,
