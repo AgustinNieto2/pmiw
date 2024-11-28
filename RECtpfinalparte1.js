@@ -1,6 +1,7 @@
 //Comision nro 3 
 //Alumno : Nieto Agustin 
 //Rec Tpfinal parte 1 
+// link video explicativo
 let estado = 0; // Estado inicial
 let textos = [];
 let botonA = [];
@@ -16,7 +17,7 @@ function preload() {
   // Cargar imágenes secuenciales
   for (let i = 1; i <= 12; i++) {
   img.resize(640, 0);  
-  fondos.push(loadImage(`data/${i}.jpg`));
+  fondos.push(loadImage('data/image'+i+'.jpg'));
   }
 }
 
@@ -43,6 +44,18 @@ background(0);
   mostrarBotones();
 }
 
+function pantalla1(){
+  image(imgFondo(0),0,0);
+}
+function pantalla2(){
+  image(imgFondo(1),0,0);
+}
+function pantalla3(){
+  image(imgFondo(2),0,0);
+}
+function pantalla4(){
+  image(imgFondo(3),0,0);
+}
 function mostrarTexto(texto) {
   textSize(20);
   textAlign(CENTER);
@@ -105,13 +118,14 @@ function inicializar() {
     "Iron Man, Thor y Capitán América pelean contra Thanos.",
     "El Capitán América es derrotado por Thanos.",
     "Iron Man adquiere las gemas del infinito y derrota a Thanos fácilmente.",
-    "Tony es corrompido por el poderde las gemas y se convierte en villano.",
+    "Tony es corrompido por el poder de las gemas y se convierte en villano.",
     "Iron Man se encuentra solo frente a Thanos.",
     "Iron Man pierde la batalla.",
     "¿Ayudar a Iron Man?",
     "Thor salva a Iron Man y derrota a Thanos.",
     "Capitán América se une a la pelea, pero ambos son derrotados.",
     "Doctor Strange aparece para ayudar a los Vengadores y vence a Thanos.",
+    "Thanos Chasquea los dedos y elimina al resto de la Humanidad",
   ];
 
   // Botones para cada estado
@@ -122,26 +136,26 @@ function inicializar() {
     { text: "Seguir Luchando", next: 4 },
     { text: "Intentar de Nuevo", next: 5 },
     { text: "Iron Man Gana", next: 6 },
-    { text: "Tony Villano", next: 7 },
+    { text: "Volver al Inicio", next: 1 },
     { text: "Capitán América", next: 8 },
     { text: "Thor Actúa", next: 9 },
     { text: "Doctor Strange", next: 10 },
     null,
     null,
     null,
+    { text: "Volver al Inicio", next: 1 },
   ];
 
   botonB = [
     null,
     null,
     { text: "Luchar Separados", next: 4 },
-    { text: "Thor Actúa", next: 5 },
+    { text: "Thanos", next: 13 },
     { text: "Iron Man Retoma", next: 6 },
     null,
     null,
     { text: "recibir ayuda de Thor ", next: 10 },
     null,
-    { text: "Volver al Inicio", next: 1 },
     null,
     null,
     null,
