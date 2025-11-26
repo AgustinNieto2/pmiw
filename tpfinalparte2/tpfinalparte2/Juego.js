@@ -1,6 +1,6 @@
 class Juego {
   constructor() {
-    this.pajaro = new PajaroMecanico(300, 240);
+    this.pajaro = new PajaroMecanico(640, 480);
     this.estado = "inicio";
     this.tiempoTotal = 30;
     this.tiempoRestante = this.tiempoTotal;
