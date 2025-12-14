@@ -27,6 +27,7 @@ class Juego {
   dibujar() {
     if (this.nombrePantallaActual == "inicio") this.dibujarInicio();
     else if (this.nombrePantallaActual == "instrucciones") this.dibujarInstrucciones();
+    else if (this.nombrePantallaActual == "creditos") this.dibujarCreditos();
     else if (this.nombrePantallaActual == "juego") this.dibujarJuego();
     else if (this.nombrePantallaActual == "ganaste") this.dibujarGanaste();
     else if (this.nombrePantallaActual == "perdiste") this.dibujarPerdiste();
@@ -40,7 +41,7 @@ class Juego {
     textSize(36);
     text("Completar el ruiseñor mecánico", width / 2, 80);
     textSize(24);
-    text("Presioná J para jugar - I para instrucciones", width / 2, height - 50);
+    text("Presioná J para jugar - I instrucciones - C créditos", width / 2, height - 50);
   }
 
   dibujarInstrucciones() {
@@ -51,12 +52,24 @@ class Juego {
     textSize(30);
     text("INSTRUCCIONES", width / 2, 50);
     textSize(18);
-    text(
-      "Arrastrá cada parte del pájaro hasta su círculo.\n\nClick para agarrar y soltar\n\nJ para jugar - R para volver",
-      width / 2,
-      height / 2
-    );
+    text("Arrastrá cada parte del pájaro hasta su círculo.\n\nClick para agarrar y soltar\n\nJ para jugar - R para volver", width / 2, height / 2);
   }
+  
+ dibujarCreditos() {
+    imageMode(CENTER);
+    image(imagenFondoJuego, width / 2, height / 2, width, height);
+
+    fill(0);
+    textAlign(CENTER, CENTER);
+   
+   textSize(30);
+   text("CRÉDITOS", width / 2, 50);
+
+   textSize(18);
+   text("Tomas Pianelli 119110/7 y Agustin Nieto 119101/6",  width / 2,height / 2 );
+   text("Presioná J para jugar - I instrucciones", width / 2, height - 60);
+
+ }
 
   dibujarGanaste() {
     image(imagenVictoria, width / 2, height / 2, width, height);
@@ -140,6 +153,7 @@ class Juego {
 
   keyPressed() {
     if (key == "i" || key == "I") this.nombrePantallaActual = "instrucciones";
+    if (key == "c" || key == "C") this.nombrePantallaActual = "creditos";
     if (key == "j" || key == "J") this.iniciarJuego();
     if (key == "r" || key == "R") {
       this.nombrePantallaActual = "inicio";
@@ -167,9 +181,9 @@ class Juego {
             parte.estaSeleccionada = "si";
             this.hayUnaParteSeleccionada = "si";
             this.parteSeleccionadaActual = parte;
-          }
-        }
       }
     }
+   }
   }
+ }
 }
