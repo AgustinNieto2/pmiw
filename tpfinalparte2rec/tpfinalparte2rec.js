@@ -1,3 +1,4 @@
+// video : https://youtu.be/cRHDrYOjZbo
 let juego;
 let imagenInicio;
 let imagenDerrota;
