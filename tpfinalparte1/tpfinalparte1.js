@@ -1,7 +1,7 @@
 // TP#Final Parte 1 - Comisión 5, Leo Garay
 // Tomas Pianelli 119110/7 - Agustin Nieto 119101/6
 // El Ruiseñor del Emperador
-
+// https://youtu.be/jE5CAzZpCs8
 let apuntador = 0;
 let pantalla = 0;
 let textos = [];
@@ -189,3 +189,4 @@ function colisionBoton(x, y, w, h) {
 function colisionBoton(x, y, w, h) {
   return (mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h);
 }
+
